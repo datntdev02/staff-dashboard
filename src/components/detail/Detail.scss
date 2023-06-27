@@ -1,0 +1,31 @@
+.detail-container {
+    background-color: #333;
+    width: 100%;
+    height: 89.8vh;
+
+    .staff-info {
+        background-color: #fff;
+        margin: 0 300px;
+        padding-top: 100px;
+
+        img {
+            width: 25%;
+            margin-left: 38%;
+            box-shadow: 5px 10px 18px #ccc;
+        }
+
+        .info-name {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .info-address {
+            text-align: center;
+        }
+
+        .info-age {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+    }
+}

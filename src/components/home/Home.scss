@@ -1,0 +1,47 @@
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+    .staff {
+        background-color: #ccc;
+        width: 300px;
+        padding: 25px 20px;
+        margin: 10px;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .staff-info {
+            text-align: center;
+
+            .staff-name {
+                font-size: 24px;
+                padding-top: 10px;
+                text-align: center;
+            }
+
+            .staff-address {
+                padding-top: 5px;
+            }
+
+            .staff-age {
+                padding-bottom: 5px;
+            }
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 10px;
+            background-color: #666666;
+            color: #fff;
+            border-radius: 10px;
+        }
+    }
+}
