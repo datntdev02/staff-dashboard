@@ -5,8 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import './Navigation.scss'
+import { Button } from '@mui/material';
 
-function Navigation() {
+function Navigation({ data, handleLogout }) {
     return (
         <Container>
             <Navbar expand="lg" collapseOnSelect >
@@ -22,13 +23,21 @@ function Navigation() {
                         <NavLink to="/contact" className="nav-link">
                             Contact
                         </NavLink>
+                        <NavLink className="group-btn">
+                            {data ? (
+                                <Button className="btn" style={{color:"#fff", backgroundColor:"#000"}} onClick={handleLogout}>
+                                   Logout
+                                </Button>
+                            ) : (
+                                <Button className="btn" style={{color:"#fff", backgroundColor:"#000"}} component={NavLink} to="/login">
+                                    Login
+                                </Button>
+                            )}
+                        </NavLink>
                     </Nav>
-                    <NavLink to="/login" className="login">
-                        Login
-                    </NavLink>
                 </Navbar.Collapse>
             </Navbar>
-        </Container>
+        </Container >
     )
 }
 

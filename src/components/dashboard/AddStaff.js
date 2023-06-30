@@ -40,33 +40,42 @@ function AddStaff() {
         <div className='form-body'>
           <div className='form-group'>
             <TextField id="standard-basic" label="ID" variant="standard"
+              fullWidth
               value={id}
               disabled />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Avatar" variant="standard"
+            type='url'
+              fullWidth
               value={avatar}
               onChange={e => setAvatar(e.target.value)} />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Name" variant="standard"
+              type='text'
+              fullWidth
               value={name}
               onChange={e => setName(e.target.value)}
               required />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Age" variant="standard"
+              type='number'
+              fullWidth
               value={age}
               onChange={e => setAge(e.target.value)}
               required />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Address" variant="standard"
+              type='text'
+              fullWidth
               value={address}
               onChange={e => setAddress(e.target.value)}
               required />
           </div>
-          <div className='form-group'>
+          <div className='btn-group'>
             <div className='save-btn'>
               <Button variant="contained" color="success" type='submit'>Save</Button>
             </div>
