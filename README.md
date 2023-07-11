@@ -1,7 +1,7 @@
 # Welcome Staff Dashboard
 
 ### Introduction
-This app is using RestAPI from [https://mockapi.io/](https://mockapi.io/) and login by Google.\
+This app is using Fetch API from [https://mockapi.io/](https://mockapi.io/) and login by Google.\
 Create, update, and delete a staff on Dashboard.
 
 ### `npm i`
