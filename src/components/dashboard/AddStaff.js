@@ -46,10 +46,12 @@ function AddStaff() {
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Avatar" variant="standard"
-            type='url'
+              type='url'
               fullWidth
               value={avatar}
-              onChange={e => setAvatar(e.target.value)} />
+              onChange={e => setAvatar(e.target.value)}
+              pattern="https?://.+"
+              title='Avatar should be a URL' />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Name" variant="standard"
@@ -57,7 +59,9 @@ function AddStaff() {
               fullWidth
               value={name}
               onChange={e => setName(e.target.value)}
-              required />
+              required
+              pattern="[A-Za-z]{4,24}"
+              title='Name should contain at least 4 digit' />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Age" variant="standard"
@@ -65,7 +69,9 @@ function AddStaff() {
               fullWidth
               value={age}
               onChange={e => setAge(e.target.value)}
-              required />
+              required
+              pattern="[0-9]{1,3}"
+              title='Age should contain at least 2 digit.' />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Address" variant="standard"
@@ -73,7 +79,9 @@ function AddStaff() {
               fullWidth
               value={address}
               onChange={e => setAddress(e.target.value)}
-              required />
+              required
+              pattern="[A-Za-z]{0,100}"
+              title='Address should not empty.' />
           </div>
           <div className='btn-group'>
             <div className='save-btn'>

@@ -63,7 +63,9 @@ function EditStaff() {
               type='url'
               fullWidth
               value={avatar}
-              onChange={e => setAvatar(e.target.value)} />
+              onChange={e => setAvatar(e.target.value)}
+              pattern="https?://.+"
+              title='Avatar should be a URL' />
           </div>
           <div className='form-group'>
             <TextField id="standard-basic" label="Name" variant="standard"
@@ -72,6 +74,8 @@ function EditStaff() {
               value={name}
               onChange={e => setName(e.target.value)}
               required
+              pattern="[A-Za-z]{4,24}"
+              title='Name should contain at least 4 digit'
             />
           </div>
           <div className='form-group'>
@@ -81,6 +85,8 @@ function EditStaff() {
               value={age}
               onChange={e => setAge(e.target.value)}
               required
+              pattern="[0-9]{1,3}"
+              title='Age should contain at least 2 digit.'
             />
           </div>
           <div className='form-group'>
@@ -89,7 +95,9 @@ function EditStaff() {
               fullWidth
               value={address}
               onChange={e => setAddress(e.target.value)}
-              required />
+              required
+              pattern="[A-Za-z]{0,100}"
+              title='Address should not empty.' />
           </div>
           <div className='btn-group'>
             <div className='update-btn'>

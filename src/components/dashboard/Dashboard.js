@@ -52,10 +52,11 @@ function Dashboard({ data }) {
     <div>
       {data ? (<TableContainer component={Paper} className='dashboard-container'>
         <h2>List of Staff</h2>
-        <Link to='/dashboard/add' className='add-btn'><Button variant="contained" >
-          <label>Add new Staff here </label>
-          <AddIcon />
-        </Button>
+        <Link to='/dashboard/add' className='add-btn'>
+          <Button variant="contained" >
+            <label>Add new Staff</label>
+            <AddIcon />
+          </Button>
         </Link>
         <Table sx={{ minWidth: 650 }} aria-label="simple table" className='staff-table'>
           <TableHead>

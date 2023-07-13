@@ -1,31 +1,33 @@
 .detail-container {
-    background-color: #333;
-    width: 100%;
-    height: 91.8vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+
+    .staff-avatar {
+        img {
+            width: 400px;
+            box-shadow: 2px 2px 10px #000;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    }
 
     .staff-info {
-        background-color: #fff;
-        margin: 0 300px;
-        padding-top: 100px;
+        padding: 10px 20px;
+        margin-bottom: -30px;
 
-        img {
-            width: 25%;
-            margin-left: 38%;
-            box-shadow: 5px 10px 18px #ccc;
-        }
-
-        .info-name {
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        .info-address {
-            text-align: center;
-        }
-
+        .info-name,
+        .info-address,
         .info-age {
-            text-align: center;
-            padding-bottom: 100px;
+            color: #000;
+            text-align: left;
+            font-size: 18px;
+            margin: 10px;
+            letter-spacing: 2px;
+
         }
     }
 }
