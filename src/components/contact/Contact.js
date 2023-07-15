@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button, Stack, TextField } from '@mui/material'
 import React from 'react'
 import './Contact.scss'
 function Contact() {
@@ -7,32 +7,41 @@ function Contact() {
   }
   return (
     <div className='contact-container'>
-      <h1 className='contact-header'>Get in touch</h1>
-      <div className="contact-form container mt-5">
-        <h2 className="mb-3">Send Message</h2>
+      <div className="contact-form">
+        <h2>Send message</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="name">
-              Name
-            </label>
-            <input className="form-control" type="text" id="name" required />
-          </div>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="email">
-              Email
-            </label>
-            <input className="form-control" type="email" id="email" required />
-          </div>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="message">
-              Message
-            </label>
-            <textarea className="form-control" id="message" required />
-          </div>
+          <Stack spacing={2} direction="row" sx={{ marginBottom: 3 }}>
+            <TextField
+              type="text"
+              variant='outlined'
+              color='primary'
+              label="Name"
+              fullWidth
+              required
+            />
+            <TextField
+              type="email"
+              variant='outlined'
+              color='primary'
+              label="Email"
+              fullWidth
+              required
+            />
+          </Stack>
+          <TextField
+            type="text"
+            variant='outlined'
+            color='primary'
+            label="Message"
+            fullWidth
+            required
+            sx={{ mb: 3 }}
+          />
           <Button variant="contained">SEND</Button>
         </form>
       </div>
-    </div>)
+    </div>
+  )
 }
 
 export default Contact

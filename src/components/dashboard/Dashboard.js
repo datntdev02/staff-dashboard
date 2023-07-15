@@ -50,8 +50,7 @@ function Dashboard({ data }) {
   }
   return (
     <div>
-      {data ? (<TableContainer component={Paper} className='dashboard-container'>
-        <h2>List of Staff</h2>
+      {data ? (<TableContainer component={Paper} className='dashboard-container' style={{ padding: "0", margin: "0" }}>
         <Link to='/dashboard/add' className='add-btn'>
           <Button variant="contained" >
             <label>Add new Staff</label>
